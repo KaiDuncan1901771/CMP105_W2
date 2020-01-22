@@ -17,7 +17,19 @@ Level::~Level()
 // handle user input
 void Level::handleInput()
 {
+	if (input->isKeyDown(sf::Keyboard::J) && input->isKeyDown(sf::Keyboard::K) && input->isKeyDown(sf::Keyboard::L))
+	{
+		input->setKeyUp(sf::Keyboard::J);
+		input->setKeyUp(sf::Keyboard::K);
+		input->setKeyUp(sf::Keyboard::L);
+		std::cout << "J, K and L were Pressed\n";
+	}
 
+	if (input->isKeyDown(sf::Keyboard::Escape)) {
+		input->setKeyUp(sf::Keyboard::Escape);
+		std::cout << "ESC was Pressed\n";
+		window->close();
+	}
 
 }
 
