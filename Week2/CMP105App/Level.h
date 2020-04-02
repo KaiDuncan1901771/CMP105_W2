@@ -4,7 +4,7 @@
 #include "Framework/Input.h"
 #include <string.h>
 #include <iostream>
-
+#include <stdlib.h>
 
 class Level{
 public:
@@ -24,6 +24,15 @@ private:
 	sf::RenderWindow* window;
 	Input* input;
 
-	// Add your object here
+	bool dragging;
+	int x1;
+	int x2;
+	int y1;
+	int y2;
+	int diffX;
+	int diffY;
 
+	// Add your object here
+	sf::Font font;
+	sf::Text text;
 };
